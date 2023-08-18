@@ -1,0 +1,8 @@
+runtime: python39  # specify your Python version
+entrypoint: python app2.py  # your Flask app's entry point
+instance_class: B4  # choose an instance class based on your needs
+readiness_check:
+  timeout_sec: 300 # or whatever value is appropriate
+basic_scaling:
+  max_instances: 1 # Adjust the maximum number of instances as needed
+  idle_timeout: 10m # Adjust the idle timeout as needed
